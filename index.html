@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Form</h1>
+    <button id="darkModeToggle">🌙</button>
+
+    <form id="contactForm" autocomplete="off" novalidate>
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" required pattern="[0-9]{10}" />
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <button type="submit" class="btn">
+        <span class="btn-text">Submit</span>
+        <span class="btn-loader"></span>
+      </button>
+
+      <button type="button" id="saveBtn" class="btn save-btn">Save Progress</button>
+    </form>
+
+    <button type="button" id="showNameBtn" class="btn show-name-btn">Show Submitted Name</button>
+    <div id="submittedName" class="submitted-name"></div>
+    <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- Add this below "Show Submitted Name" button -->
+<button type="button" id="downloadBtn" class="btn download-btn">Download as File</button>
